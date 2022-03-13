@@ -1,0 +1,7 @@
+Naming convention.
+
+Variable: camelCase
+Constain: PascalCase
+Comment: detail
+function: getName(), getAge()
+
