@@ -1,0 +1,14 @@
+D:\Dev\VStudio\Workspace\Group-project\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\bin\Debug\EDWARM.exe.config
+D:\Dev\VStudio\Workspace\Group-project\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\bin\Debug\EDWARM.exe
+D:\Dev\VStudio\Workspace\Group-project\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\bin\Debug\EDWARM.pdb
+D:\Dev\VStudio\Workspace\Group-project\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.csproj.AssemblyReference.cache
+D:\Dev\VStudio\Workspace\Group-project\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.csproj.SuggestedBindingRedirects.cache
+D:\Dev\VStudio\Workspace\Group-project\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.frm_CustomersInfo.resources
+D:\Dev\VStudio\Workspace\Group-project\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.frm_DevicesInfo.resources
+D:\Dev\VStudio\Workspace\Group-project\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.frm_ExportForCus.resources
+D:\Dev\VStudio\Workspace\Group-project\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.frm_WarrantyCardInfo.resources
+D:\Dev\VStudio\Workspace\Group-project\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.Properties.Resources.resources
+D:\Dev\VStudio\Workspace\Group-project\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.csproj.GenerateResource.cache
+D:\Dev\VStudio\Workspace\Group-project\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.csproj.CoreCompileInputs.cache
+D:\Dev\VStudio\Workspace\Group-project\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.exe
+D:\Dev\VStudio\Workspace\Group-project\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.pdb

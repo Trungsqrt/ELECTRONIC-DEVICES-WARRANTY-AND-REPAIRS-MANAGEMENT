@@ -1,7 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+<<<<<<< HEAD
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
+=======
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+>>>>>>> 2374e56facb8cfbfa497794104fe708a23e1ac83
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDWARM", "EDWARM.csproj", "{52191792-CB54-4324-BA71-97248435B721}"
 EndProject
@@ -20,6 +25,10 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+<<<<<<< HEAD
 		SolutionGuid = {FEE734A7-7D76-4117-9097-3F7AD29E8503}
+=======
+		SolutionGuid = {1EA64FD6-540F-492B-BE81-A6641904D520}
+>>>>>>> 2374e56facb8cfbfa497794104fe708a23e1ac83
 	EndGlobalSection
 EndGlobal
