@@ -16,7 +16,7 @@ namespace EDWARM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_WarrantyCardInfo());
+            Application.Run(new Main());
         }
     }
 }

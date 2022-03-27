@@ -12,3 +12,17 @@ D:\Dev\VStudio\Workspace\Group-project\Group-project-ELECTRONIC-DEVICES-WARRANTY
 D:\Dev\VStudio\Workspace\Group-project\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.csproj.CoreCompileInputs.cache
 D:\Dev\VStudio\Workspace\Group-project\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.exe
 D:\Dev\VStudio\Workspace\Group-project\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.pdb
+D:\.NET\CDIO\EDWARM\bin\Debug\EDWARM.exe.config
+D:\.NET\CDIO\EDWARM\bin\Debug\EDWARM.exe
+D:\.NET\CDIO\EDWARM\bin\Debug\EDWARM.pdb
+D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.csproj.AssemblyReference.cache
+D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.frm_CustomersInfo.resources
+D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.frm_DevicesInfo.resources
+D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.frm_ExportForCus.resources
+D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.frm_WarrantyCardInfo.resources
+D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.Main.resources
+D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.Properties.Resources.resources
+D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.csproj.GenerateResource.cache
+D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.csproj.CoreCompileInputs.cache
+D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.exe
+D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.pdb
