@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_Search = new System.Windows.Forms.Button();
-            this.txt_CusID = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -42,12 +38,26 @@
             this.btn_Delete = new System.Windows.Forms.Button();
             this.btn_Edit = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_Phone = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dateTimePicker_DoB = new System.Windows.Forms.DateTimePicker();
+            this.txt_Adress = new System.Windows.Forms.TextBox();
+            this.txt_Name = new System.Windows.Forms.TextBox();
+            this.txt_Email = new System.Windows.Forms.TextBox();
+            this.txt_CusID = new System.Windows.Forms.TextBox();
+            this.btn_Search = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CardInformation)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -55,62 +65,20 @@
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.Lavender;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.66667F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 441F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.22302F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 78.77698F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 356F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1095, 635);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Lavender;
-            this.groupBox1.Controls.Add(this.btn_Search);
-            this.groupBox1.Controls.Add(this.txt_CusID);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 85);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1089, 105);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Search";
-            // 
-            // btn_Search
-            // 
-            this.btn_Search.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Search.Location = new System.Drawing.Point(452, 39);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(100, 31);
-            this.btn_Search.TabIndex = 1;
-            this.btn_Search.Text = "Search";
-            this.btn_Search.UseVisualStyleBackColor = true;
-            // 
-            // txt_CusID
-            // 
-            this.txt_CusID.Location = new System.Drawing.Point(235, 37);
-            this.txt_CusID.Name = "txt_CusID";
-            this.txt_CusID.Size = new System.Drawing.Size(175, 34);
-            this.txt_CusID.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(114, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 22);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Customer ID";
             // 
             // panel1
             // 
@@ -119,7 +87,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1089, 58);
+            this.panel1.Size = new System.Drawing.Size(1089, 53);
             this.panel1.TabIndex = 2;
             // 
             // label1
@@ -143,11 +111,11 @@
             this.tableLayoutPanel2.Controls.Add(this.dgv_CardInformation, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 196);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 281);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1089, 436);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1089, 351);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // dgv_CardInformation
@@ -159,7 +127,7 @@
             this.dgv_CardInformation.Name = "dgv_CardInformation";
             this.dgv_CardInformation.RowHeadersWidth = 51;
             this.dgv_CardInformation.RowTemplate.Height = 24;
-            this.dgv_CardInformation.Size = new System.Drawing.Size(829, 430);
+            this.dgv_CardInformation.Size = new System.Drawing.Size(829, 345);
             this.dgv_CardInformation.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -178,7 +146,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(248, 430);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(248, 345);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // btn_Exit
@@ -186,9 +154,9 @@
             this.btn_Exit.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btn_Exit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Exit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Exit.Location = new System.Drawing.Point(3, 324);
+            this.btn_Exit.Location = new System.Drawing.Point(3, 261);
             this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(242, 103);
+            this.btn_Exit.Size = new System.Drawing.Size(242, 81);
             this.btn_Exit.TabIndex = 3;
             this.btn_Exit.Text = "Exit";
             this.btn_Exit.UseVisualStyleBackColor = false;
@@ -198,9 +166,9 @@
             this.btn_Delete.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btn_Delete.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Delete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Delete.Location = new System.Drawing.Point(3, 217);
+            this.btn_Delete.Location = new System.Drawing.Point(3, 175);
             this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(242, 101);
+            this.btn_Delete.Size = new System.Drawing.Size(242, 80);
             this.btn_Delete.TabIndex = 2;
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = false;
@@ -210,9 +178,9 @@
             this.btn_Edit.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btn_Edit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_Edit.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Edit.Location = new System.Drawing.Point(3, 110);
+            this.btn_Edit.Location = new System.Drawing.Point(3, 89);
             this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.Size = new System.Drawing.Size(242, 101);
+            this.btn_Edit.Size = new System.Drawing.Size(242, 80);
             this.btn_Edit.TabIndex = 1;
             this.btn_Edit.Text = "Edit";
             this.btn_Edit.UseVisualStyleBackColor = false;
@@ -225,10 +193,138 @@
             this.btn_Add.ForeColor = System.Drawing.Color.Black;
             this.btn_Add.Location = new System.Drawing.Point(3, 3);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(242, 101);
+            this.btn_Add.Size = new System.Drawing.Size(242, 80);
             this.btn_Add.TabIndex = 0;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.txt_Phone);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.dateTimePicker_DoB);
+            this.panel2.Controls.Add(this.txt_Adress);
+            this.panel2.Controls.Add(this.txt_Name);
+            this.panel2.Controls.Add(this.txt_Email);
+            this.panel2.Controls.Add(this.txt_CusID);
+            this.panel2.Controls.Add(this.btn_Search);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(3, 62);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1089, 213);
+            this.panel2.TabIndex = 3;
+            // 
+            // txt_Phone
+            // 
+            this.txt_Phone.Location = new System.Drawing.Point(211, 131);
+            this.txt_Phone.Name = "txt_Phone";
+            this.txt_Phone.Size = new System.Drawing.Size(250, 22);
+            this.txt_Phone.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(115, 134);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 17);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Phone";
+            // 
+            // dateTimePicker_DoB
+            // 
+            this.dateTimePicker_DoB.Location = new System.Drawing.Point(211, 88);
+            this.dateTimePicker_DoB.Name = "dateTimePicker_DoB";
+            this.dateTimePicker_DoB.Size = new System.Drawing.Size(250, 22);
+            this.dateTimePicker_DoB.TabIndex = 11;
+            this.dateTimePicker_DoB.Value = new System.DateTime(2022, 3, 27, 0, 0, 0, 0);
+            // 
+            // txt_Adress
+            // 
+            this.txt_Adress.Location = new System.Drawing.Point(635, 48);
+            this.txt_Adress.Multiline = true;
+            this.txt_Adress.Name = "txt_Adress";
+            this.txt_Adress.Size = new System.Drawing.Size(250, 115);
+            this.txt_Adress.TabIndex = 10;
+            // 
+            // txt_Name
+            // 
+            this.txt_Name.Location = new System.Drawing.Point(211, 51);
+            this.txt_Name.Name = "txt_Name";
+            this.txt_Name.Size = new System.Drawing.Size(250, 22);
+            this.txt_Name.TabIndex = 9;
+            // 
+            // txt_Email
+            // 
+            this.txt_Email.Location = new System.Drawing.Point(635, 14);
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.Size = new System.Drawing.Size(250, 22);
+            this.txt_Email.TabIndex = 7;
+            // 
+            // txt_CusID
+            // 
+            this.txt_CusID.Location = new System.Drawing.Point(211, 14);
+            this.txt_CusID.Name = "txt_CusID";
+            this.txt_CusID.Size = new System.Drawing.Size(250, 22);
+            this.txt_CusID.TabIndex = 6;
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.Location = new System.Drawing.Point(751, 169);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(134, 41);
+            this.btn_Search.TabIndex = 5;
+            this.btn_Search.Text = "Search";
+            this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click_1);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(573, 51);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 17);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Adress";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(573, 14);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(42, 17);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Email";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(115, 93);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 17);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Date Of Birth";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(115, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 17);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(115, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Customer ID";
             // 
             // frm_CustomersInfo
             // 
@@ -239,13 +335,13 @@
             this.Name = "frm_CustomersInfo";
             this.Text = "frm_CustomersInfo";
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CardInformation)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -257,14 +353,24 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btn_Search;
-        private System.Windows.Forms.TextBox txt_CusID;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgv_CardInformation;
         private System.Windows.Forms.Button btn_Exit;
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.Button btn_Edit;
         private System.Windows.Forms.Button btn_Add;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txt_Adress;
+        private System.Windows.Forms.TextBox txt_Name;
+        private System.Windows.Forms.TextBox txt_Email;
+        private System.Windows.Forms.TextBox txt_CusID;
+        private System.Windows.Forms.Button btn_Search;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_DoB;
+        private System.Windows.Forms.TextBox txt_Phone;
+        private System.Windows.Forms.Label label7;
     }
 }
