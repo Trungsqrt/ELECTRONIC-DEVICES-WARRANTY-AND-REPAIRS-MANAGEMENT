@@ -36,12 +36,15 @@ namespace EDWARM
             conn.Close();
         }
 
-        public int exScala(SqlCommand cmd)
+        public int exScala(string query)
         {
+            SqlCommand comm = new SqlCommand(query, conn);
             conn.Open();
-            int count = (int)cmd.ExecuteScalar();
+            var kq = comm.ExecuteScalar().ToString();
             conn.Close();
-            return count;
+            int result = 0;
+            if (int.TryParse(kq, out result)) ;
+            return result;
         }
 
         public DataTable LoadBang(string sql)
@@ -51,6 +54,15 @@ namespace EDWARM
             da.Fill(dt);
             return dt;
 
+        }
+
+        public object Login(SqlCommand cmd)
+        {
+            conn.Open();
+            object result = cmd.ExecuteScalar();
+            conn.Close();
+
+            return result;
         }
     }
 }

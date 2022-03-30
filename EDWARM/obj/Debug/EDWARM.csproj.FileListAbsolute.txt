@@ -41,3 +41,4 @@ D:\Dev\VStudio\Workspace\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-M
 D:\Dev\VStudio\Workspace\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.csproj.CoreCompileInputs.cache
 D:\Dev\VStudio\Workspace\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.exe
 D:\Dev\VStudio\Workspace\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.pdb
+D:\Dev\VStudio\Workspace\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.frm_Login.resources

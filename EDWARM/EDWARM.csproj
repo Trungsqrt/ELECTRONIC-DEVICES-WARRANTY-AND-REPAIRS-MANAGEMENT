@@ -66,6 +66,12 @@
     <Compile Include="frm_ExportForCus.Designer.cs">
       <DependentUpon>frm_ExportForCus.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_WarrantyCardInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ExportForCus.resx">
       <DependentUpon>frm_ExportForCus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_WarrantyCardInfo.resx">
       <DependentUpon>frm_WarrantyCardInfo.cs</DependentUpon>

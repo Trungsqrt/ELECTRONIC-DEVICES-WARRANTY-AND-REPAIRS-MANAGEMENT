@@ -113,10 +113,10 @@ namespace EDWARM
 
         int count()
         {
-            SqlCommand cmd = new SqlCommand("countId", dthandle.getConnectionString());
-            cmd.CommandType = CommandType.StoredProcedure;
-            int c = dthandle.exScala(cmd);
-            return c + 1;
+            string query = "select max(customer_id) from customer";
+
+            var c = dthandle.exScala(query);
+            return 1 + c;
         }
 
         private void btn_Edit_Click_1(object sender, EventArgs e)
@@ -162,6 +162,15 @@ namespace EDWARM
         private void txt_search_Click(object sender, EventArgs e)
         {
             txt_search.Clear();
+        }
+
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
+            clearTb();
+            btn_Add.Enabled = true;
+            btn_Add.BackColor = Color.FromArgb(235, 124, 104);
+            count();
+            txt_CusID.Text = count().ToString();
         }
     }
 }

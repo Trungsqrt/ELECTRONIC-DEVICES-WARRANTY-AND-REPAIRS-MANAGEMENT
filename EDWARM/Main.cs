@@ -19,7 +19,17 @@ namespace EDWARM
 
         private void danhSáchKháchHToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(Application.OpenForms["frm_CustomersInfo"] == null)
+            if(Application.OpenForms["frm_DevicesInfo"] != null)
+            {
+                Application.OpenForms["frm_DevicesInfo"].Close();
+            }
+            
+            if(Application.OpenForms["frm_WarrantyCardInfo"] != null)
+            {
+                Application.OpenForms["frm_WarrantyCardInfo"].Close();
+            }
+
+            if (Application.OpenForms["frm_CustomersInfo"] == null )
             {
                 frm_CustomersInfo frm = new frm_CustomersInfo();
                 frm.MdiParent = this;
@@ -42,6 +52,16 @@ namespace EDWARM
 
         private void devicesListToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (Application.OpenForms["frm_CustomersInfo"] != null)
+            {
+                Application.OpenForms["frm_CustomersInfo"].Close();
+            }
+
+            if (Application.OpenForms["frm_WarrantyCardInfo"] != null)
+            {
+                Application.OpenForms["frm_WarrantyCardInfo"].Close();
+            }
+
             if (Application.OpenForms["frm_DevicesInfo"] == null)
             {
                 frm_DevicesInfo frm = new frm_DevicesInfo();
@@ -56,6 +76,16 @@ namespace EDWARM
 
         private void warrantyCardToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (Application.OpenForms["frm_CustomersInfo"] != null)
+            {
+                Application.OpenForms["frm_CustomersInfo"].Close();
+            }
+
+            if (Application.OpenForms["frm_DevicesInfo"] != null)
+            {
+                Application.OpenForms["frm_DevicesInfo"].Close();
+            }
+
             if (Application.OpenForms["frm_WarrantyCardInfo"] == null)
             {
                 frm_WarrantyCardInfo frm = new frm_WarrantyCardInfo();

@@ -40,6 +40,7 @@
             this.btn_Edit = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_refresh = new System.Windows.Forms.Button();
             this.lbl_search = new System.Windows.Forms.Label();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.txt_Phone = new System.Windows.Forms.TextBox();
@@ -235,6 +236,7 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.btn_refresh);
             this.panel2.Controls.Add(this.lbl_search);
             this.panel2.Controls.Add(this.txt_search);
             this.panel2.Controls.Add(this.txt_Phone);
@@ -254,6 +256,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1416, 238);
             this.panel2.TabIndex = 3;
+            // 
+            // btn_refresh
+            // 
+            this.btn_refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(124)))), ((int)(((byte)(104)))));
+            this.btn_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_refresh.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_refresh.Location = new System.Drawing.Point(1030, 96);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(152, 61);
+            this.btn_refresh.TabIndex = 16;
+            this.btn_refresh.Text = "Refresh";
+            this.btn_refresh.UseVisualStyleBackColor = false;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
             // lbl_search
             // 
@@ -309,7 +325,7 @@
             this.txt_Adress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_Adress.Multiline = true;
             this.txt_Adress.Name = "txt_Adress";
-            this.txt_Adress.Size = new System.Drawing.Size(281, 143);
+            this.txt_Adress.Size = new System.Drawing.Size(281, 130);
             this.txt_Adress.TabIndex = 10;
             // 
             // txt_Name
@@ -447,5 +463,6 @@
         private System.Windows.Forms.Label lbl_title;
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.Label lbl_search;
+        private System.Windows.Forms.Button btn_refresh;
     }
 }
