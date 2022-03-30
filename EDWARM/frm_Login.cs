@@ -68,11 +68,22 @@ namespace EDWARM
 
         private void timer_notify_Tick(object sender, EventArgs e)
         {
-            timer_notify.Start();
+            Random ran = new Random();
+            #region random column
+            int color1 = ran.Next(0, 255);
+            int color2 = ran.Next(0, 255);
+            int color3 = ran.Next(0, 255);
+            int color4 = ran.Next(0, 255);
+            #endregion
             lbl_notify.Text = "UserName: admin, Password: admin";
-            lbl_notify.ForeColor = Color.Red;
-            lbl_notify.ForeColor = Color.Yellow;
-            lbl_notify.ForeColor = Color.Green;
+            lbl_notify.ForeColor = Color.FromArgb(color1, color2, color3, color4);
+
+        }
+
+        private void frm_Login_Load(object sender, EventArgs e)
+        {
+            timer_notify.Start();
+            timer_notify.Enabled = true;
         }
     }
 }

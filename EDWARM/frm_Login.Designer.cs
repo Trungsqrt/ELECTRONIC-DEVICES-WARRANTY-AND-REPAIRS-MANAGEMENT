@@ -98,15 +98,17 @@
             // lbl_notify
             // 
             this.lbl_notify.AutoSize = true;
-            this.lbl_notify.Location = new System.Drawing.Point(203, 38);
+            this.lbl_notify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_notify.Location = new System.Drawing.Point(46, 38);
             this.lbl_notify.Name = "lbl_notify";
-            this.lbl_notify.Size = new System.Drawing.Size(51, 20);
+            this.lbl_notify.Size = new System.Drawing.Size(541, 37);
             this.lbl_notify.TabIndex = 5;
-            this.lbl_notify.Text = "label1";
+            this.lbl_notify.Text = "UserName: admin, Password: admin";
+            this.lbl_notify.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timer_notify
             // 
-            this.timer_notify.Interval = 1000;
+            this.timer_notify.Interval = 2000;
             this.timer_notify.Tick += new System.EventHandler(this.timer_notify_Tick);
             // 
             // btn_exit
@@ -136,6 +138,7 @@
             // 
             // frm_Login
             // 
+            this.AcceptButton = this.btn_login;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
@@ -154,6 +157,7 @@
             this.Name = "frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frm_Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
