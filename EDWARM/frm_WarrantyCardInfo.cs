@@ -35,8 +35,7 @@ namespace EDWARM
 
         private void btn_Export_Click(object sender, EventArgs e)
         {
-            frm_ExportForCus frm = new frm_ExportForCus();
-            frm.ShowDialog();
+
         }
 
         private void frm_WarrantyCardInfo_Load(object sender, EventArgs e)

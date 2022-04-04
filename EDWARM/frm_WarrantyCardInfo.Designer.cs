@@ -41,6 +41,10 @@
             this.btn_Add = new System.Windows.Forms.Button();
             this.dgv_wc = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.nud_pow = new System.Windows.Forms.NumericUpDown();
+            this.btn_refresh = new System.Windows.Forms.Button();
+            this.lbl_search = new System.Windows.Forms.Label();
+            this.txt_search = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cb_CusID = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,10 +54,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_refresh = new System.Windows.Forms.Button();
-            this.lbl_search = new System.Windows.Forms.Label();
-            this.txt_search = new System.Windows.Forms.TextBox();
-            this.nud_pow = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -244,6 +244,7 @@
             // 
             // dgv_wc
             // 
+            this.dgv_wc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_wc.BackgroundColor = System.Drawing.Color.White;
             this.dgv_wc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_wc.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -278,6 +279,53 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1288, 334);
             this.panel2.TabIndex = 7;
+            // 
+            // nud_pow
+            // 
+            this.nud_pow.Location = new System.Drawing.Point(170, 149);
+            this.nud_pow.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.nud_pow.Name = "nud_pow";
+            this.nud_pow.Size = new System.Drawing.Size(281, 26);
+            this.nud_pow.TabIndex = 34;
+            // 
+            // btn_refresh
+            // 
+            this.btn_refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(124)))), ((int)(((byte)(104)))));
+            this.btn_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_refresh.ForeColor = System.Drawing.Color.Transparent;
+            this.btn_refresh.Location = new System.Drawing.Point(919, 131);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(152, 61);
+            this.btn_refresh.TabIndex = 33;
+            this.btn_refresh.Text = "Refresh";
+            this.btn_refresh.UseVisualStyleBackColor = false;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
+            // 
+            // lbl_search
+            // 
+            this.lbl_search.AutoSize = true;
+            this.lbl_search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_search.ForeColor = System.Drawing.Color.White;
+            this.lbl_search.Location = new System.Drawing.Point(910, 53);
+            this.lbl_search.Name = "lbl_search";
+            this.lbl_search.Size = new System.Drawing.Size(171, 22);
+            this.lbl_search.TabIndex = 32;
+            this.lbl_search.Text = "Search via customer id";
+            // 
+            // txt_search
+            // 
+            this.txt_search.Location = new System.Drawing.Point(855, 86);
+            this.txt_search.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_search.Name = "txt_search";
+            this.txt_search.Size = new System.Drawing.Size(281, 26);
+            this.txt_search.TabIndex = 31;
+            this.txt_search.Click += new System.EventHandler(this.txt_search_Click);
+            this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
             // 
             // label8
             // 
@@ -364,53 +412,6 @@
             this.label2.Size = new System.Drawing.Size(64, 20);
             this.label2.TabIndex = 14;
             this.label2.Text = "Card ID";
-            // 
-            // btn_refresh
-            // 
-            this.btn_refresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(124)))), ((int)(((byte)(104)))));
-            this.btn_refresh.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_refresh.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_refresh.Location = new System.Drawing.Point(919, 131);
-            this.btn_refresh.Name = "btn_refresh";
-            this.btn_refresh.Size = new System.Drawing.Size(152, 61);
-            this.btn_refresh.TabIndex = 33;
-            this.btn_refresh.Text = "Refresh";
-            this.btn_refresh.UseVisualStyleBackColor = false;
-            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
-            // 
-            // lbl_search
-            // 
-            this.lbl_search.AutoSize = true;
-            this.lbl_search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl_search.ForeColor = System.Drawing.Color.White;
-            this.lbl_search.Location = new System.Drawing.Point(910, 53);
-            this.lbl_search.Name = "lbl_search";
-            this.lbl_search.Size = new System.Drawing.Size(171, 22);
-            this.lbl_search.TabIndex = 32;
-            this.lbl_search.Text = "Search via customer id";
-            // 
-            // txt_search
-            // 
-            this.txt_search.Location = new System.Drawing.Point(855, 86);
-            this.txt_search.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txt_search.Name = "txt_search";
-            this.txt_search.Size = new System.Drawing.Size(281, 26);
-            this.txt_search.TabIndex = 31;
-            this.txt_search.Click += new System.EventHandler(this.txt_search_Click);
-            this.txt_search.TextChanged += new System.EventHandler(this.txt_search_TextChanged);
-            // 
-            // nud_pow
-            // 
-            this.nud_pow.Location = new System.Drawing.Point(170, 149);
-            this.nud_pow.Maximum = new decimal(new int[] {
-            9999999,
-            0,
-            0,
-            0});
-            this.nud_pow.Name = "nud_pow";
-            this.nud_pow.Size = new System.Drawing.Size(281, 26);
-            this.nud_pow.TabIndex = 34;
             // 
             // frm_WarrantyCardInfo
             // 
