@@ -41,6 +41,13 @@
             this.btn_Edit = new System.Windows.Forms.Button();
             this.btn_Add = new System.Windows.Forms.Button();
             this.dgv_wc = new System.Windows.Forms.DataGridView();
+            this.cardidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deliverydateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceofwarrantyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customeridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.warcardBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eDWARMDataSet = new EDWARM.EDWARMDataSet();
             this.panel2 = new System.Windows.Forms.Panel();
             this.nud_pow = new System.Windows.Forms.NumericUpDown();
             this.btn_refresh = new System.Windows.Forms.Button();
@@ -55,23 +62,18 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.eDWARMDataSet = new EDWARM.EDWARMDataSet();
-            this.warcardBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.warcardTableAdapter = new EDWARM.EDWARMDataSetTableAdapters.warcardTableAdapter();
-            this.cardidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deliverydateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceofwarrantyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customeridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.warcardBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_wc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warcardBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eDWARMDataSet)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_pow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eDWARMDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.warcardBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warcardBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -266,6 +268,51 @@
             this.dgv_wc.TabIndex = 1;
             this.dgv_wc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_wc_CellClick);
             // 
+            // cardidDataGridViewTextBoxColumn
+            // 
+            this.cardidDataGridViewTextBoxColumn.DataPropertyName = "card_id";
+            this.cardidDataGridViewTextBoxColumn.HeaderText = "card_id";
+            this.cardidDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cardidDataGridViewTextBoxColumn.Name = "cardidDataGridViewTextBoxColumn";
+            // 
+            // deliverydateDataGridViewTextBoxColumn
+            // 
+            this.deliverydateDataGridViewTextBoxColumn.DataPropertyName = "delivery_date";
+            this.deliverydateDataGridViewTextBoxColumn.HeaderText = "delivery_date";
+            this.deliverydateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.deliverydateDataGridViewTextBoxColumn.Name = "deliverydateDataGridViewTextBoxColumn";
+            // 
+            // priceofwarrantyDataGridViewTextBoxColumn
+            // 
+            this.priceofwarrantyDataGridViewTextBoxColumn.DataPropertyName = "price_of_warranty";
+            this.priceofwarrantyDataGridViewTextBoxColumn.HeaderText = "price_of_warranty";
+            this.priceofwarrantyDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.priceofwarrantyDataGridViewTextBoxColumn.Name = "priceofwarrantyDataGridViewTextBoxColumn";
+            // 
+            // noteDataGridViewTextBoxColumn
+            // 
+            this.noteDataGridViewTextBoxColumn.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn.HeaderText = "note";
+            this.noteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
+            // 
+            // customeridDataGridViewTextBoxColumn
+            // 
+            this.customeridDataGridViewTextBoxColumn.DataPropertyName = "customer_id";
+            this.customeridDataGridViewTextBoxColumn.HeaderText = "customer_id";
+            this.customeridDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.customeridDataGridViewTextBoxColumn.Name = "customeridDataGridViewTextBoxColumn";
+            // 
+            // warcardBindingSource
+            // 
+            this.warcardBindingSource.DataMember = "warcard";
+            this.warcardBindingSource.DataSource = this.eDWARMDataSet;
+            // 
+            // eDWARMDataSet
+            // 
+            this.eDWARMDataSet.DataSetName = "EDWARMDataSet";
+            this.eDWARMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
@@ -348,6 +395,7 @@
             // 
             // cb_CusID
             // 
+            this.cb_CusID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_CusID.FormattingEnabled = true;
             this.cb_CusID.Location = new System.Drawing.Point(151, 160);
             this.cb_CusID.Name = "cb_CusID";
@@ -420,54 +468,13 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Card ID";
             // 
-            // eDWARMDataSet
-            // 
-            this.eDWARMDataSet.DataSetName = "EDWARMDataSet";
-            this.eDWARMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // warcardBindingSource
-            // 
-            this.warcardBindingSource.DataMember = "warcard";
-            this.warcardBindingSource.DataSource = this.eDWARMDataSet;
-            // 
             // warcardTableAdapter
             // 
             this.warcardTableAdapter.ClearBeforeFill = true;
             // 
-            // cardidDataGridViewTextBoxColumn
+            // warcardBindingSource1
             // 
-            this.cardidDataGridViewTextBoxColumn.DataPropertyName = "card_id";
-            this.cardidDataGridViewTextBoxColumn.HeaderText = "card_id";
-            this.cardidDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.cardidDataGridViewTextBoxColumn.Name = "cardidDataGridViewTextBoxColumn";
-            // 
-            // deliverydateDataGridViewTextBoxColumn
-            // 
-            this.deliverydateDataGridViewTextBoxColumn.DataPropertyName = "delivery_date";
-            this.deliverydateDataGridViewTextBoxColumn.HeaderText = "delivery_date";
-            this.deliverydateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.deliverydateDataGridViewTextBoxColumn.Name = "deliverydateDataGridViewTextBoxColumn";
-            // 
-            // priceofwarrantyDataGridViewTextBoxColumn
-            // 
-            this.priceofwarrantyDataGridViewTextBoxColumn.DataPropertyName = "price_of_warranty";
-            this.priceofwarrantyDataGridViewTextBoxColumn.HeaderText = "price_of_warranty";
-            this.priceofwarrantyDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.priceofwarrantyDataGridViewTextBoxColumn.Name = "priceofwarrantyDataGridViewTextBoxColumn";
-            // 
-            // noteDataGridViewTextBoxColumn
-            // 
-            this.noteDataGridViewTextBoxColumn.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn.HeaderText = "note";
-            this.noteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
-            // 
-            // customeridDataGridViewTextBoxColumn
-            // 
-            this.customeridDataGridViewTextBoxColumn.DataPropertyName = "customer_id";
-            this.customeridDataGridViewTextBoxColumn.HeaderText = "customer_id";
-            this.customeridDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.customeridDataGridViewTextBoxColumn.Name = "customeridDataGridViewTextBoxColumn";
+            this.warcardBindingSource1.DataMember = "warcard";
             // 
             // frm_WarrantyCardInfo
             // 
@@ -489,11 +496,12 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_wc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warcardBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eDWARMDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nud_pow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eDWARMDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.warcardBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warcardBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -533,5 +541,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn priceofwarrantyDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn customeridDataGridViewTextBoxColumn;
+
+        private System.Windows.Forms.BindingSource warcardBindingSource1;
+        
     }
 }

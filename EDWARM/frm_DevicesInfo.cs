@@ -20,7 +20,11 @@ namespace EDWARM
 
         private void btn_Exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult result = MessageBox.Show("Bạn có muốn đóng?", "Thông báo", MessageBoxButtons.YesNo);
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void frm_DevicesInfo_Load(object sender, EventArgs e)
@@ -37,19 +41,40 @@ namespace EDWARM
             count();
             txt_DeviceID.Text = count().ToString();
         }
+
+        bool isNullorEmpty(string s1, string s2, string s3, string s4, string s5, string s6, string s7)
+        {
+            if (s1 == null || s1 == "" ||
+                s2 == null || s2 == "" ||
+                s3 == null || s3 == "" ||
+                s4 == null || s4 == "" ||
+                s5 == null || s5 == "" ||
+                s6 == null || s6 == "" ||
+                s7 == null || s7 == "")
+                return true;
+            return false;
+        }
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("SPAddDevices", dthandle.getConnectionString());
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@device_id", txt_DeviceID.Text);
-            cmd.Parameters.AddWithValue("@serial", txt_Serial.Text);
-            cmd.Parameters.AddWithValue("@dayPurchase", dateTimePicker_DoPurchase.Value);
-            cmd.Parameters.AddWithValue("@periodWarranty", int.Parse(nud_pow.Text));
-            cmd.Parameters.AddWithValue("@customer_id", cb_CusID.Text);
-            cmd.Parameters.AddWithValue("@price", nud_p.Text);
-            cmd.Parameters.AddWithValue("@description", txt_des.Text);
-            dthandle.exNonQuery(cmd);
-            load();
+            if (isNullorEmpty(txt_Serial.Text, txt_DeviceID.Text,
+                dateTimePicker_DoPurchase.Text, nud_pow.Text,
+                cb_CusID.Text, nud_p.Text, txt_des.Text))
+                MessageBox.Show("Không được để trống");
+            else
+            {
+                SqlCommand cmd = new SqlCommand("SPAddDevices", dthandle.getConnectionString());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@device_id", txt_DeviceID.Text);
+                cmd.Parameters.AddWithValue("@serial", txt_Serial.Text);
+                cmd.Parameters.AddWithValue("@dayPurchase", dateTimePicker_DoPurchase.Value);
+                cmd.Parameters.AddWithValue("@periodWarranty", int.Parse(nud_pow.Text));
+                cmd.Parameters.AddWithValue("@customer_id", cb_CusID.Text);
+                cmd.Parameters.AddWithValue("@price", nud_p.Text);
+                cmd.Parameters.AddWithValue("@description", txt_des.Text);
+                dthandle.exNonQuery(cmd);
+                load();
+            }
+
         }
         void loadCbBox()
         {
@@ -84,29 +109,40 @@ namespace EDWARM
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("SPDeleteDevices", dthandle.getConnectionString());
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@device_id", txt_DeviceID.Text);
-            dthandle.exNonQuery(cmd);
-            load();
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa?", "Thông báo", MessageBoxButtons.YesNo);
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                SqlCommand cmd = new SqlCommand("SPDeleteDevices", dthandle.getConnectionString());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@device_id", txt_DeviceID.Text);
+                dthandle.exNonQuery(cmd);
+                load();
+            }
         }
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("SPUpdateDevices", dthandle.getConnectionString());
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@device_id", txt_DeviceID.Text);
-            cmd.Parameters.AddWithValue("@serial", txt_Serial.Text);
-            cmd.Parameters.AddWithValue("@dayPurchase", dateTimePicker_DoPurchase.Value);
-            cmd.Parameters.AddWithValue("@periodWarranty", nud_pow.Text);
-            cmd.Parameters.AddWithValue("@price", nud_p.Text);
-            cmd.Parameters.AddWithValue("@description", txt_des.Text);
-            cmd.Parameters.AddWithValue("@customer_id", cb_CusID.Text);
-            dthandle.exNonQuery(cmd);
-            load();
-            clearTb();
-            btn_Add.Enabled = true;
-            btn_Add.BackColor = Color.FromArgb(235, 124, 104);
+            if (isNullorEmpty(txt_DeviceID.Text, txt_Serial.Text,
+                dateTimePicker_DoPurchase.Text, nud_pow.Text,
+                cb_CusID.Text, nud_p.Text, txt_des.Text))
+                MessageBox.Show("Không được để trống");
+            else
+            {
+                SqlCommand cmd = new SqlCommand("SPUpdateDevices", dthandle.getConnectionString());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@device_id", txt_DeviceID.Text);
+                cmd.Parameters.AddWithValue("@serial", txt_Serial.Text);
+                cmd.Parameters.AddWithValue("@dayPurchase", dateTimePicker_DoPurchase.Value);
+                cmd.Parameters.AddWithValue("@periodWarranty", nud_pow.Text);
+                cmd.Parameters.AddWithValue("@price", nud_p.Text);
+                cmd.Parameters.AddWithValue("@description", txt_des.Text);
+                cmd.Parameters.AddWithValue("@customer_id", cb_CusID.Text);
+                dthandle.exNonQuery(cmd);
+                load();
+                clearTb();
+                btn_Add.Enabled = true;
+                btn_Add.BackColor = Color.FromArgb(235, 124, 104);
+            }
         }
 
         void clearTb()

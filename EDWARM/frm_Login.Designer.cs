@@ -46,9 +46,10 @@
             this.btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(124)))), ((int)(((byte)(104)))));
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_login.ForeColor = System.Drawing.Color.White;
-            this.btn_login.Location = new System.Drawing.Point(181, 225);
+            this.btn_login.Location = new System.Drawing.Point(161, 180);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(108, 40);
+            this.btn_login.Size = new System.Drawing.Size(96, 32);
             this.btn_login.TabIndex = 0;
             this.btn_login.Text = "Login";
             this.btn_login.UseVisualStyleBackColor = false;
@@ -59,19 +60,20 @@
             this.lbl_username.AutoSize = true;
             this.lbl_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_username.ForeColor = System.Drawing.Color.White;
-            this.lbl_username.Location = new System.Drawing.Point(48, 106);
+            this.lbl_username.Location = new System.Drawing.Point(43, 85);
             this.lbl_username.Name = "lbl_username";
-            this.lbl_username.Size = new System.Drawing.Size(110, 25);
+            this.lbl_username.Size = new System.Drawing.Size(94, 20);
             this.lbl_username.TabIndex = 1;
             this.lbl_username.Text = "User Name";
             // 
             // txt_username
             // 
-            this.txt_username.Location = new System.Drawing.Point(181, 110);
+            this.txt_username.Location = new System.Drawing.Point(161, 88);
+            this.txt_username.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(289, 26);
+            this.txt_username.Size = new System.Drawing.Size(257, 22);
             this.txt_username.TabIndex = 2;
-            this.txt_username.Text = "User: admin, Password: admin";
+            this.txt_username.Text = "admin";
             this.txt_username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_username.Click += new System.EventHandler(this.txt_username_Click);
             // 
@@ -80,18 +82,20 @@
             this.lbl_Password.AutoSize = true;
             this.lbl_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Password.ForeColor = System.Drawing.Color.White;
-            this.lbl_Password.Location = new System.Drawing.Point(48, 170);
+            this.lbl_Password.Location = new System.Drawing.Point(43, 136);
             this.lbl_Password.Name = "lbl_Password";
-            this.lbl_Password.Size = new System.Drawing.Size(98, 25);
+            this.lbl_Password.Size = new System.Drawing.Size(83, 20);
             this.lbl_Password.TabIndex = 3;
             this.lbl_Password.Text = "Password";
             // 
             // txt_pass
             // 
-            this.txt_pass.Location = new System.Drawing.Point(181, 170);
+            this.txt_pass.Location = new System.Drawing.Point(161, 136);
+            this.txt_pass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_pass.Name = "txt_pass";
-            this.txt_pass.Size = new System.Drawing.Size(289, 26);
+            this.txt_pass.Size = new System.Drawing.Size(257, 22);
             this.txt_pass.TabIndex = 4;
+            this.txt_pass.Text = "admin";
             this.txt_pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_pass.UseSystemPasswordChar = true;
             // 
@@ -99,9 +103,9 @@
             // 
             this.lbl_notify.AutoSize = true;
             this.lbl_notify.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_notify.Location = new System.Drawing.Point(46, 38);
+            this.lbl_notify.Location = new System.Drawing.Point(41, 30);
             this.lbl_notify.Name = "lbl_notify";
-            this.lbl_notify.Size = new System.Drawing.Size(541, 37);
+            this.lbl_notify.Size = new System.Drawing.Size(455, 31);
             this.lbl_notify.TabIndex = 5;
             this.lbl_notify.Text = "UserName: admin, Password: admin";
             this.lbl_notify.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -116,9 +120,10 @@
             this.btn_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(124)))), ((int)(((byte)(104)))));
             this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_exit.ForeColor = System.Drawing.Color.White;
-            this.btn_exit.Location = new System.Drawing.Point(362, 225);
+            this.btn_exit.Location = new System.Drawing.Point(322, 180);
+            this.btn_exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(108, 40);
+            this.btn_exit.Size = new System.Drawing.Size(96, 32);
             this.btn_exit.TabIndex = 6;
             this.btn_exit.Text = "Exit";
             this.btn_exit.UseVisualStyleBackColor = false;
@@ -128,9 +133,10 @@
             // 
             this.checkBox_showpass.AutoSize = true;
             this.checkBox_showpass.ForeColor = System.Drawing.Color.White;
-            this.checkBox_showpass.Location = new System.Drawing.Point(491, 170);
+            this.checkBox_showpass.Location = new System.Drawing.Point(436, 136);
+            this.checkBox_showpass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox_showpass.Name = "checkBox_showpass";
-            this.checkBox_showpass.Size = new System.Drawing.Size(147, 24);
+            this.checkBox_showpass.Size = new System.Drawing.Size(128, 21);
             this.checkBox_showpass.TabIndex = 7;
             this.checkBox_showpass.Text = "Show password";
             this.checkBox_showpass.UseVisualStyleBackColor = true;
@@ -139,10 +145,10 @@
             // frm_Login
             // 
             this.AcceptButton = this.btn_login;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(48)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(644, 324);
+            this.ClientSize = new System.Drawing.Size(572, 259);
             this.Controls.Add(this.checkBox_showpass);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.lbl_notify);
@@ -153,6 +159,7 @@
             this.Controls.Add(this.btn_login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -8,6 +8,6 @@ namespace EDWARM
 {
     internal class ConnectionString
     {
-        public static string conn = @"Data Source=DESKTOP-4QBIGAA\SQLEXPRESS;Initial Catalog=EDWARM;Integrated Security=True";
+        public static string conn = @"Data Source=MSI\SQLEXPRESS;Initial Catalog=EDWARM;Integrated Security=True";
     }
 }

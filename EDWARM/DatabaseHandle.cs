@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace EDWARM
 {
@@ -31,13 +32,21 @@ namespace EDWARM
 
         public void exNonQuery(SqlCommand cmd)
         {
-            conn.Open();
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            try
+            {
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Không thể thao tác");
+            }
         }
 
         public int exScala(string query)
         {
+            conn.Close();
             SqlCommand comm = new SqlCommand(query, conn);
             conn.Open();
             var kq = comm.ExecuteScalar().ToString();

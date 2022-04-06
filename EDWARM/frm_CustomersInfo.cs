@@ -66,7 +66,11 @@ namespace EDWARM
         #endregion
         private void btn_Exit_Click_1(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult result = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.YesNo);
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void frm_CustomersInfo_Load(object sender, EventArgs e)
@@ -95,20 +99,38 @@ namespace EDWARM
             btn_Add.Enabled = false;
             btn_Add.BackColor = Color.FromArgb(220, 220, 220);
         }
-
+        bool isNullorEmpty(string s1, string s2, string s3, string s4, string s5, string s6)
+        {
+            if (s1 == null || s1 == "" ||
+                s2 == null || s2 == "" ||
+                s3 == null || s3 == "" ||
+                s4 == null || s4 == "" ||
+                s5 == null || s5 == "" ||
+                s6 == null || s6 == "")
+                return true;
+            return false;
+        }
         private void btn_Add_Click(object sender, EventArgs e)
         {
-
-            SqlCommand cmd = new SqlCommand("SPAdd", dthandle.getConnectionString());
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@customer_id", txt_CusID.Text);
-            cmd.Parameters.AddWithValue("@name", txt_Name.Text);
-            cmd.Parameters.AddWithValue("@dob", dateTimePicker_DoB.Value);
-            cmd.Parameters.AddWithValue("@phone", txt_Phone.Text);
-            cmd.Parameters.AddWithValue("@email", txt_Email.Text);
-            cmd.Parameters.AddWithValue("@address", txt_Adress.Text);
-            dthandle.exNonQuery(cmd);
-            load();
+            if (isNullorEmpty(txt_CusID.Text, txt_Name.Text,
+                dateTimePicker_DoB.Text, txt_Phone.Text,
+                txt_Email.Text, txt_Adress.Text))
+                MessageBox.Show("Không được để trống");
+            else if (txt_Phone.Text.All(Char.IsLetter))
+                MessageBox.Show("Số điện thoại phải là số");
+            else
+            {
+                SqlCommand cmd = new SqlCommand("SPAdd", dthandle.getConnectionString());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@customer_id", txt_CusID.Text);
+                cmd.Parameters.AddWithValue("@name", txt_Name.Text);
+                cmd.Parameters.AddWithValue("@dob", dateTimePicker_DoB.Value);
+                cmd.Parameters.AddWithValue("@phone", txt_Phone.Text);
+                cmd.Parameters.AddWithValue("@email", txt_Email.Text);
+                cmd.Parameters.AddWithValue("@address", txt_Adress.Text);
+                dthandle.exNonQuery(cmd);
+                load();
+            }
         }
 
         int count()
@@ -121,19 +143,28 @@ namespace EDWARM
 
         private void btn_Edit_Click_1(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("SPUpdate", dthandle.getConnectionString());
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@customer_id", txt_CusID.Text);
-            cmd.Parameters.AddWithValue("@name", txt_Name.Text);
-            cmd.Parameters.AddWithValue("@dob", dateTimePicker_DoB.Value);
-            cmd.Parameters.AddWithValue("@phone", txt_Phone.Text);
-            cmd.Parameters.AddWithValue("@email", txt_Email.Text);
-            cmd.Parameters.AddWithValue("@address", txt_Adress.Text);
-            dthandle.exNonQuery(cmd);
-            load();
-            clearTb();
-            btn_Add.Enabled = true;
-            btn_Add.BackColor = Color.FromArgb(235, 124, 104);
+            if (isNullorEmpty(txt_CusID.Text, txt_Name.Text,
+                dateTimePicker_DoB.Text, txt_Phone.Text,
+                txt_Email.Text, txt_Adress.Text))
+                MessageBox.Show("Không được để trống");
+            else if (txt_Phone.Text.All(Char.IsLetter))
+                MessageBox.Show("Số điện thoại phải là số");
+            else
+            {
+                SqlCommand cmd = new SqlCommand("SPUpdate", dthandle.getConnectionString());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@customer_id", txt_CusID.Text);
+                cmd.Parameters.AddWithValue("@name", txt_Name.Text);
+                cmd.Parameters.AddWithValue("@dob", dateTimePicker_DoB.Value);
+                cmd.Parameters.AddWithValue("@phone", txt_Phone.Text);
+                cmd.Parameters.AddWithValue("@email", txt_Email.Text);
+                cmd.Parameters.AddWithValue("@address", txt_Adress.Text);
+                dthandle.exNonQuery(cmd);
+                load();
+                clearTb();
+                btn_Add.Enabled = true;
+                btn_Add.BackColor = Color.FromArgb(235, 124, 104);
+            }
         }
 
         void clearTb()
@@ -146,11 +177,15 @@ namespace EDWARM
 
         private void btn_Delete_Click_1(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("SPDelete", dthandle.getConnectionString());
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@customer_id", txt_CusID.Text);
-            dthandle.exNonQuery(cmd);
-            load();
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa?", "Thông báo", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                SqlCommand cmd = new SqlCommand("SPDelete", dthandle.getConnectionString());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@customer_id", txt_CusID.Text);
+                dthandle.exNonQuery(cmd);
+                load();
+            }
         }
 
         private void txt_search_TextChanged(object sender, EventArgs e)

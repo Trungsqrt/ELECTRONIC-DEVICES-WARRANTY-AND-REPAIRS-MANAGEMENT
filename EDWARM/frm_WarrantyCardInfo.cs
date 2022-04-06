@@ -31,7 +31,11 @@ namespace EDWARM
 
         private void btn_Exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult result = MessageBox.Show("Bạn có muốn thoát?", "Thông báo", MessageBoxButtons.YesNo);
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void btn_Export_Click(object sender, EventArgs e)
@@ -58,6 +62,8 @@ namespace EDWARM
 
         private void frm_WarrantyCardInfo_Load(object sender, EventArgs e)
         {
+// TODO: This line of code loads data into the 'eDWARMDataSet1.warcard' table. You can move, or remove it, as needed.
+this.warcardTableAdapter.Fill(this.eDWARMDataSet.warcard);
             // TODO: This line of code loads data into the 'eDWARMDataSet.warcard' table. You can move, or remove it, as needed.
             this.warcardTableAdapter.Fill(this.eDWARMDataSet.warcard);
             load();
@@ -81,17 +87,35 @@ namespace EDWARM
             return 1 + c;
         }
 
+        bool isNullorEmpty(string s1, string s2, string s3, string s4, string s5)
+        {
+            if (s1 == null || s1 == "" ||
+                s2 == null || s2 == "" ||
+                s3 == null || s3 == "" ||
+                s4 == null || s4 == "" ||
+                s5 == null || s5 == "")
+                return true;
+            return false;
+        }
+
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("SPAddCard", dthandle.getConnectionString());
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@card_id", txt_CardID.Text);
-            cmd.Parameters.AddWithValue("@delivery_date", dtPicker_Delivery.Value);
-            cmd.Parameters.AddWithValue("@price_of_warranty", nud_pow.Value);
-            cmd.Parameters.AddWithValue("@note", txt_Note.Text);
-            cmd.Parameters.AddWithValue("@customer_id", cb_CusID.Text);
-            dthandle.exNonQuery(cmd);
-            load();
+            if (isNullorEmpty(txt_CardID.Text, dtPicker_Delivery.Text,
+                nud_pow.Text, txt_Note.Text,
+                cb_CusID.Text))
+                MessageBox.Show("Không được để trống");
+            else
+            {
+                SqlCommand cmd = new SqlCommand("SPAddCard", dthandle.getConnectionString());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@card_id", txt_CardID.Text);
+                cmd.Parameters.AddWithValue("@delivery_date", dtPicker_Delivery.Value);
+                cmd.Parameters.AddWithValue("@price_of_warranty", nud_pow.Value);
+                cmd.Parameters.AddWithValue("@note", txt_Note.Text);
+                cmd.Parameters.AddWithValue("@customer_id", cb_CusID.Text);
+                dthandle.exNonQuery(cmd);
+                load();
+            }
         }
 
         void loadCbBox()
@@ -105,19 +129,26 @@ namespace EDWARM
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("SPUpdateCard", dthandle.getConnectionString());
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@card_id", txt_CardID.Text);
-            cmd.Parameters.AddWithValue("@delivery_date", dtPicker_Delivery.Value);
-            cmd.Parameters.AddWithValue("@price_of_warranty", nud_pow.Value);
-            cmd.Parameters.AddWithValue("@note", txt_Note.Text);
-            cmd.Parameters.AddWithValue("@customer_id", cb_CusID.Text);
-            dthandle.exNonQuery(cmd);
-            load();
-            clearTb();
-            btn_Add.Enabled = true;
-            btn_Add.BackColor = Color.FromArgb(235, 124, 104);
+            if (isNullorEmpty(txt_CardID.Text, dtPicker_Delivery.Text,
+                nud_pow.Text, txt_Note.Text,
+                cb_CusID.Text))
+                MessageBox.Show("Không được để trống");
+            else
+            {
+                SqlCommand cmd = new SqlCommand("SPUpdateCard", dthandle.getConnectionString());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@card_id", txt_CardID.Text);
+                cmd.Parameters.AddWithValue("@delivery_date", dtPicker_Delivery.Value);
+                cmd.Parameters.AddWithValue("@price_of_warranty", nud_pow.Value);
+                cmd.Parameters.AddWithValue("@note", txt_Note.Text);
+                cmd.Parameters.AddWithValue("@customer_id", cb_CusID.Text);
+                dthandle.exNonQuery(cmd);
+                load();
+                clearTb();
+                btn_Add.Enabled = true;
+                btn_Add.BackColor = Color.FromArgb(235, 124, 104);
+            }
         }
         void clearTb()
         {
@@ -129,20 +160,24 @@ namespace EDWARM
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("SPDeleteCard", dthandle.getConnectionString());
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@card_id", txt_CardID.Text);
-            dthandle.exNonQuery(cmd);
-            load();
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa?", "Thông báo", MessageBoxButtons.YesNo);
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                SqlCommand cmd = new SqlCommand("SPDeleteCard", dthandle.getConnectionString());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@card_id", txt_CardID.Text);
+                dthandle.exNonQuery(cmd);
+                load();
+            }
         }
 
         private void dgv_wc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txt_CardID.Text = dgv_wc.CurrentRow.Cells["card_id"].Value.ToString();
-            dtPicker_Delivery.Text = dgv_wc.CurrentRow.Cells["delivery_date"].Value.ToString();
-            nud_pow.Text = dgv_wc.CurrentRow.Cells["price_of_warranty"].Value.ToString();
-            cb_CusID.Text = dgv_wc.CurrentRow.Cells["customer_id"].Value.ToString();
-            txt_Note.Text = dgv_wc.CurrentRow.Cells["note"].Value.ToString();
+            txt_CardID.Text = dgv_wc.CurrentRow.Cells[0].Value.ToString();
+            dtPicker_Delivery.Text = dgv_wc.CurrentRow.Cells[1].Value.ToString();
+            nud_pow.Text = dgv_wc.CurrentRow.Cells[2].Value.ToString();
+            cb_CusID.Text = dgv_wc.CurrentRow.Cells[3].Value.ToString();
+            txt_Note.Text = dgv_wc.CurrentRow.Cells[4].Value.ToString();
             btn_Add.Enabled = false;
             btn_Add.BackColor = Color.FromArgb(220, 220, 220);
         }
