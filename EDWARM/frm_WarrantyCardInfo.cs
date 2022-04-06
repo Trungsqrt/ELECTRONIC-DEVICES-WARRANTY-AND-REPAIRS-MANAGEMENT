@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,11 +36,30 @@ namespace EDWARM
 
         private void btn_Export_Click(object sender, EventArgs e)
         {
-
+            using(SaveFileDialog sfd= new SaveFileDialog() { Filter="Excel Workbook|*.xlsx"})
+            {
+                if(sfd.ShowDialog()==DialogResult.OK)
+                {
+                    try
+                    {
+                        using(XLWorkbook workbook= new XLWorkbook())
+                        {
+                            workbook.Worksheets.Add(this.eDWARMDataSet.warcard.CopyToDataTable(), "warcard");
+                            workbook.SaveAs(sfd.FileName);
+                        }
+                        MessageBox.Show("You have successfully export your data to an excel file", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }catch(Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
 
         private void frm_WarrantyCardInfo_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'eDWARMDataSet.warcard' table. You can move, or remove it, as needed.
+            this.warcardTableAdapter.Fill(this.eDWARMDataSet.warcard);
             load();
         }
 

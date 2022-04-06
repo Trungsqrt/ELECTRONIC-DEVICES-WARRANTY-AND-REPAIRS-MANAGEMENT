@@ -18,7 +18,6 @@ D:\.NET\CDIO\EDWARM\bin\Debug\EDWARM.pdb
 D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.csproj.AssemblyReference.cache
 D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.frm_CustomersInfo.resources
 D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.frm_DevicesInfo.resources
-D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.frm_ExportForCus.resources
 D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.frm_WarrantyCardInfo.resources
 D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.Main.resources
 D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.Properties.Resources.resources
@@ -42,3 +41,13 @@ D:\Dev\VStudio\Workspace\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-M
 D:\Dev\VStudio\Workspace\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.exe
 D:\Dev\VStudio\Workspace\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.pdb
 D:\Dev\VStudio\Workspace\Group-project-ELECTRONIC-DEVICES-WARRANTY-AND-REPAIRS-MANAGEMENT\EDWARM\obj\Debug\EDWARM.frm_Login.resources
+D:\.NET\CDIO\EDWARM\bin\Debug\ClosedXML.dll
+D:\.NET\CDIO\EDWARM\bin\Debug\DocumentFormat.OpenXml.dll
+D:\.NET\CDIO\EDWARM\bin\Debug\ExcelNumberFormat.dll
+D:\.NET\CDIO\EDWARM\bin\Debug\System.IO.Packaging.dll
+D:\.NET\CDIO\EDWARM\bin\Debug\ClosedXML.pdb
+D:\.NET\CDIO\EDWARM\bin\Debug\ClosedXML.xml
+D:\.NET\CDIO\EDWARM\bin\Debug\DocumentFormat.OpenXml.xml
+D:\.NET\CDIO\EDWARM\bin\Debug\ExcelNumberFormat.xml
+D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.frm_Login.resources
+D:\.NET\CDIO\EDWARM\obj\Debug\EDWARM.csproj.CopyComplete

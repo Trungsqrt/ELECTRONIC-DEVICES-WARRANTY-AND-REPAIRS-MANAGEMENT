@@ -43,7 +43,7 @@ namespace EDWARM
             var kq = comm.ExecuteScalar().ToString();
             conn.Close();
             int result = 0;
-            if (int.TryParse(kq, out result)) ;
+            if (int.TryParse(kq, out result));
             return result;
         }
 
